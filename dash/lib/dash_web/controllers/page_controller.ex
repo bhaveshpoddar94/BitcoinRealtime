@@ -7,6 +7,6 @@ defmodule DashWeb.PageController do
   end
 
   defp run_simulation() do
-    spawn fn -> Btc.init(10) end
+    spawn fn -> Btc.init(100) end
   end
 end
