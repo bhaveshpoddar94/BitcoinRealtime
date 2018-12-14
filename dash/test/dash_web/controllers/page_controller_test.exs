@@ -1,0 +1,8 @@
+defmodule DashWeb.PageControllerTest do
+  use DashWeb.ConnCase
+
+  test "GET /", %{conn: conn} do
+    conn = get conn, "/"
+    assert html_response(conn, 200) =~ "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>Hello Dash!</title>\n    <link rel=\"stylesheet\" href=\"/css/app.css\">\n  </head>\n\n  <body>\n    <div class=\"container\">\n      <header class=\"header\">\n        <nav role=\"navigation\">\n          <ul class=\"nav nav-pills pull-right\">\n            <li><a href=\"http://www.phoenixframework.org/docs\">Get Started</a></li>\n          </ul>\n        </nav>\n        <span class=\"logo\"></span>\n      </header>\n\n      <p class=\"alert alert-info\" role=\"alert\"></p>\n      <p class=\"alert alert-danger\" role=\"alert\"></p>\n\n      <main role=\"main\">\n\n<canvas id=\"myChart\"></canvas>\n\n<table width=\"100%\">\n    <tr>\n        <th>Blocks Mined</th>\n        <th>Bitcoins Transacted</th>\n        <th>Bitcoins Mined</th>\n    </tr>\n    <tr>\n        <td id=\"blocks\">0.0</td>\n        <td id=\"txn\">0.0</td>\n        <td id=\"fee\">0.0</td>\n    </tr>\n</table>\n\n<canvas id=\"myChart1\"></canvas>      </main>\n\n    </div> <!-- /container -->\n    <script src=\"http://code.jquery.com/jquery-1.11.0.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js\"></script>\n    <script src=\"/js/app.js\"></script>\n  </body>\n</html>\n"
+  end
+end

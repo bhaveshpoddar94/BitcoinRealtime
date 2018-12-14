@@ -1,0 +1,17 @@
+
+<canvas id="myChart"></canvas>
+
+<table width="100%">
+    <tr>
+        <th>Blocks Mined</th>
+        <th>Bitcoins Transacted</th>
+        <th>Bitcoins Mined</th>
+    </tr>
+    <tr>
+        <td id="blocks">0.0</td>
+        <td id="txn">0.0</td>
+        <td id="fee">0.0</td>
+    </tr>
+</table>
+
+<canvas id="myChart1"></canvas>
